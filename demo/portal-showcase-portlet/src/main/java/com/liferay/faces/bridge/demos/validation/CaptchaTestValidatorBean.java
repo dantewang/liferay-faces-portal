@@ -15,8 +15,8 @@ package com.liferay.faces.bridge.demos.validation;
 
 import java.util.Map;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.faces.context.ExternalContext;
 import jakarta.faces.context.FacesContext;
 import jakarta.portlet.PortletRequest;
@@ -32,7 +32,7 @@ import com.liferay.portal.kernel.util.WebKeys;
 /**
  * @author  Kyle Stiemann
  */
-@ManagedBean
+@Named
 @RequestScoped
 public class CaptchaTestValidatorBean {
 

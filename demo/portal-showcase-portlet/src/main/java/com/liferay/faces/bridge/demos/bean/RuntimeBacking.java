@@ -17,8 +17,8 @@ import java.util.Locale;
 import java.util.Map;
 
 import jakarta.annotation.PostConstruct;
-import jakarta.faces.bean.ApplicationScoped;
-import jakarta.faces.bean.ManagedBean;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Named;
 import jakarta.faces.context.FacesContext;
 
 import com.liferay.document.library.kernel.model.DLFolderConstants;
@@ -36,7 +36,7 @@ import com.liferay.portal.kernel.util.WebKeys;
 /**
  * @author  Juan Gonzalez
  */
-@ManagedBean
+@Named
 @ApplicationScoped
 public class RuntimeBacking {
 

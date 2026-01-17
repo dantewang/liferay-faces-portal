@@ -16,9 +16,9 @@ package com.liferay.faces.demos.bean;
 import java.io.Serializable;
 import java.util.Locale;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ManagedProperty;
-import jakarta.faces.bean.ViewScoped;
+import jakarta.inject.Named;
+import jakarta.inject.Inject;
+import jakarta.faces.view.ViewScoped;
 import jakarta.faces.context.FacesContext;
 import jakarta.faces.event.ActionEvent;
 
@@ -45,7 +45,7 @@ import com.liferay.portal.kernel.util.PropsUtil;
  *
  * @author  "Neil Griffin"
  */
-@ManagedBean(name = "registrantBackingBean")
+@Named("registrantBackingBean")
 @ViewScoped
 public class RegistrantBackingBean implements Serializable {
 
@@ -56,7 +56,7 @@ public class RegistrantBackingBean implements Serializable {
 	private static final Logger logger = LoggerFactory.getLogger(RegistrantBackingBean.class);
 
 	// Injections
-	@ManagedProperty(value = "#{registrantModelBean}")
+	@Inject
 	private transient RegistrantModelBean registrantModelBean;
 
 	// Private Data Members
@@ -69,7 +69,7 @@ public class RegistrantBackingBean implements Serializable {
 
 	public void setRegistrantModelBean(RegistrantModelBean registrantModelBean) {
 
-		// Injected via @ManagedProperty annotation
+		// Injected via @Inject annotation
 		this.registrantModelBean = registrantModelBean;
 	}
 

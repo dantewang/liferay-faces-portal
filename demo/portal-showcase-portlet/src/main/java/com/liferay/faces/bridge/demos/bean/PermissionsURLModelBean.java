@@ -18,8 +18,8 @@ import java.lang.reflect.Modifier;
 import java.util.HashMap;
 import java.util.Map;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.faces.context.FacesContext;
 
 import com.liferay.faces.portal.context.LiferayPortletHelperUtil;
@@ -33,7 +33,7 @@ import com.liferay.portal.kernel.service.permission.PortletPermissionUtil;
  * @author  Vernon Singleton
  */
 @RequestScoped
-@ManagedBean
+@Named
 public class PermissionsURLModelBean {
 
 	// Private Data Members

@@ -18,9 +18,9 @@ import java.util.Locale;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ManagedProperty;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.inject.Inject;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.faces.context.FacesContext;
 import jakarta.faces.event.ActionEvent;
 
@@ -50,7 +50,7 @@ import com.liferay.portal.kernel.service.UserLocalServiceUtil;
 /**
  * @author  Philip White
  */
-@ManagedBean(name = "testSetupBackingBean")
+@Named("testSetupBackingBean")
 @RequestScoped
 public class TestSetupBackingBean {
 
@@ -58,7 +58,7 @@ public class TestSetupBackingBean {
 	private static final Logger logger = LoggerFactory.getLogger(TestSetupBackingBean.class);
 
 	// Injections
-	@ManagedProperty(name = "usersModelBean", value = "#{usersModelBean}")
+	@Inject
 	private UsersModelBean usersModelBean;
 
 	// Private Data Members

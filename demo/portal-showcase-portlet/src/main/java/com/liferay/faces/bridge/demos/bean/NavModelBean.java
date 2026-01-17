@@ -15,9 +15,9 @@ package com.liferay.faces.bridge.demos.bean;
 
 import java.util.List;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ManagedProperty;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.inject.Inject;
+import jakarta.enterprise.context.RequestScoped;
 
 import com.liferay.faces.showcase.dto.LiferayBenefit;
 import com.liferay.faces.showcase.service.LiferayBenefitService;
@@ -27,10 +27,10 @@ import com.liferay.faces.showcase.service.LiferayBenefitService;
  * @author  Neil Griffin
  */
 @RequestScoped
-@ManagedBean
+@Named
 public class NavModelBean {
 
-	@ManagedProperty(name = "liferayBenefitService", value = "#{liferayBenefitService}")
+	@Inject
 	private LiferayBenefitService liferayBenefitService;
 
 	public List<LiferayBenefit> getLiferayBenefits() {

@@ -17,8 +17,8 @@ import java.util.Enumeration;
 import java.util.Map;
 
 import jakarta.el.ELResolver;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.faces.context.ExternalContext;
 import jakarta.faces.context.FacesContext;
 import jakarta.portlet.ActionResponse;
@@ -34,7 +34,7 @@ import com.liferay.faces.util.context.FacesContextHelperUtil;
 /**
  * @author  Neil Griffin
  */
-@ManagedBean(name = "portletPreferencesBackingBean")
+@Named("portletPreferencesBackingBean")
 @RequestScoped
 public class PortletPreferencesBackingBean {
 

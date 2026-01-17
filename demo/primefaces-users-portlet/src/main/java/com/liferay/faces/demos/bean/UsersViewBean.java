@@ -17,8 +17,8 @@ import java.io.Serializable;
 import java.util.Collection;
 import java.util.Map;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ViewScoped;
+import jakarta.inject.Named;
+import jakarta.faces.view.ViewScoped;
 import jakarta.faces.context.FacesContext;
 import jakarta.faces.context.PartialViewContext;
 
@@ -33,7 +33,7 @@ import org.primefaces.model.FilterMeta;
  *
  * @author  Neil Griffin
  */
-@ManagedBean(name = "usersViewBean")
+@Named("usersViewBean")
 @ViewScoped
 public class UsersViewBean implements Serializable {
 

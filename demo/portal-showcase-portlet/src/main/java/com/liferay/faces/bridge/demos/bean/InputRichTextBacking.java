@@ -15,8 +15,8 @@ package com.liferay.faces.bridge.demos.bean;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.faces.application.FacesMessage;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.faces.context.FacesContext;
 import jakarta.faces.event.PhaseId;
 import jakarta.faces.event.ValueChangeEvent;
@@ -30,7 +30,7 @@ import com.liferay.faces.util.logging.LoggerFactory;
 /**
  * @author  Neil Griffin
  */
-@ManagedBean
+@Named
 @RequestScoped
 public class InputRichTextBacking {
 

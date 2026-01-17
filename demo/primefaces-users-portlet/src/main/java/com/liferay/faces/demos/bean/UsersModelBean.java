@@ -21,8 +21,8 @@ import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import jakarta.faces.application.Application;
 import jakarta.faces.application.ViewHandler;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ViewScoped;
+import jakarta.inject.Named;
+import jakarta.faces.view.ViewScoped;
 import jakarta.faces.context.ExternalContext;
 import jakarta.faces.context.FacesContext;
 import jakarta.faces.model.SelectItem;
@@ -55,7 +55,7 @@ import com.liferay.portal.kernel.workflow.WorkflowConstants;
  * @author  Neil Griffin
  * @author  Kyle Stiemann
  */
-@ManagedBean(name = "usersModelBean")
+@Named("usersModelBean")
 @ViewScoped
 public class UsersModelBean implements Serializable {
 

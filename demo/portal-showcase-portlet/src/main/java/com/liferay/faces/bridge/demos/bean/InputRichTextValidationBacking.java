@@ -17,8 +17,8 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ViewScoped;
+import jakarta.inject.Named;
+import jakarta.faces.view.ViewScoped;
 import jakarta.faces.context.ExternalContext;
 import jakarta.faces.context.FacesContext;
 
@@ -26,7 +26,7 @@ import jakarta.faces.context.FacesContext;
 /**
  * @author  Kyle Stiemann
  */
-@ManagedBean
+@Named
 @ViewScoped
 public class InputRichTextValidationBacking {
 

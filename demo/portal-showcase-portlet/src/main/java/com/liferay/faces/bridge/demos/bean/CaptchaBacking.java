@@ -13,9 +13,9 @@
  */
 package com.liferay.faces.bridge.demos.bean;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ManagedProperty;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.inject.Named;
+import jakarta.inject.Inject;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.faces.component.UIViewRoot;
 import jakarta.faces.context.ExternalContext;
 import jakarta.faces.context.FacesContext;
@@ -33,11 +33,11 @@ import com.liferay.portal.kernel.util.PropsUtil;
 /**
  * @author  Juan Gonzalez
  */
-@ManagedBean
+@Named
 @RequestScoped
 public class CaptchaBacking {
 
-	@ManagedProperty(value = "#{showcaseModelBean.selectedComponent.required}")
+	@Inject
 	private boolean requiredChecked;
 
 	private String captchaText;
@@ -60,7 +60,7 @@ public class CaptchaBacking {
 
 	public void setRequiredChecked(boolean requiredChecked) {
 
-		// Injected via @ManagedProperty
+		// Injected via @Inject
 		this.requiredChecked = requiredChecked;
 	}
 

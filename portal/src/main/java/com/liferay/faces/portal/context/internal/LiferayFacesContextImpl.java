@@ -24,8 +24,8 @@ import jakarta.faces.application.Application;
 import jakarta.faces.application.FacesMessage;
 import jakarta.faces.application.FacesMessage.Severity;
 import jakarta.faces.application.ProjectStage;
-import jakarta.faces.bean.ApplicationScoped;
-import jakarta.faces.bean.ManagedBean;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Named;
 import jakarta.faces.component.UIComponent;
 import jakarta.faces.component.UIForm;
 import jakarta.faces.component.UIViewRoot;
@@ -78,7 +78,7 @@ import com.liferay.portal.kernel.theme.ThemeDisplay;
  * @deprecated
  * @author      Neil Griffin
  */
-@ManagedBean(name = "liferayFacesContext", eager = true)
+@Named("liferayFacesContext")
 @ApplicationScoped
 @SuppressWarnings("deprecation")
 @Deprecated

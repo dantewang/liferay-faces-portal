@@ -15,8 +15,8 @@ package com.liferay.faces.demos.bean;
 
 import java.io.Serializable;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ViewScoped;
+import jakarta.inject.Named;
+import jakarta.faces.view.ViewScoped;
 import jakarta.faces.context.FacesContext;
 
 import com.liferay.faces.demos.model.Registrant;
@@ -28,7 +28,7 @@ import com.liferay.faces.portal.context.LiferayPortletHelperUtil;
  *
  * @author  "Neil Griffin"
  */
-@ManagedBean(name = "registrantModelBean")
+@Named("registrantModelBean")
 @ViewScoped
 public class RegistrantModelBean implements Serializable {
 
