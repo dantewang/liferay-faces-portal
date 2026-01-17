@@ -38,6 +38,7 @@ import jakarta.faces.context.ResponseWriter;
 import jakarta.faces.event.PhaseId;
 import jakarta.faces.event.PhaseListener;
 import jakarta.faces.render.RenderKit;
+import jakarta.faces.lifecycle.Lifecycle;
 import jakarta.portlet.ActionResponse;
 import jakarta.portlet.PortalContext;
 import jakarta.portlet.PortletConfig;
@@ -1636,4 +1637,9 @@ public class LiferayFacesContextImpl extends LiferayFacesContext implements Seri
 	public void validationFailed() {
 		FacesContext.getCurrentInstance().validationFailed();
 	}
+
+    @Override
+    public Lifecycle getLifecycle() {
+        return FacesContext.getCurrentInstance().getLifecycle();
+    }
 }
